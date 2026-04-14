@@ -24,28 +24,28 @@ Playwright was selected over alternatives such as BeautifulSoup and Scrapy for t
 | **Playwright** | Handles dynamic content | Slightly heavier |
 
 BBC pages often include dynamic elements.  
-Playwright ensures **accurate and complete content extraction**.
+Playwright ensures accurate and complete content extraction.
 
 ---
 
 ## Challenges Encountered
 
-- Initial scraping captured **non-relevant links** (menus, categories, unrelated news)
+- Initial scraping captured non-relevant links (menus, categories, unrelated news)
 - BBC structure includes mixed content and evolving URL formats
 
 ### Solution Implemented
 
 A **hybrid filtering approach** was used:
 
-1. **Broad link extraction**
+1. **Broad link extraction**:
    - Captures all news links
 
-2. **Content-based filtering**
+2. **Content-based filtering**:
    - Filters articles using climate-related keywords:
      - climate, emissions, warming, energy, flood, wildfire, etc.
 
 3. **Combined validation**
-   - Uses both **title + article text** to ensure relevance
+   - Uses both title + article text: to ensure relevance
 
 ---
 
@@ -55,7 +55,3 @@ Each article includes:
 - Title
 - URL
 - Full text content
-
-### Output File:
-1. analysis_results.csv
-2. bbc_climate_articles.csv.
